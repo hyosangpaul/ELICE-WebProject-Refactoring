@@ -10,7 +10,10 @@ const Header = () => {
                 <NavLink to = '/'>
                     <LogoIMGSC src = {LogoIMG} alt = 'Logo'/>
                 </NavLink>
-                <NavLink to = '/Login'>Login</NavLink>
+                <DivSC>
+                    <NavLink to = '/Login'>Login</NavLink>
+                    <NavLink to = '/Cart'>Cart</NavLink>
+                </DivSC>
             </HeaderSC>
             <NavBarSC>
                 Categories :
@@ -29,14 +32,22 @@ const NavBarSC = styled.div`
     margin : 1em;
 `
 
-const HeaderSC = styled.header`
-    padding : 2em;
-    margin : 1em;
+const DivSC = styled.div`
+    display : flex;
+    justify-content : flex-end;
 
     & a {
         text-decoration : none;
         color : black;
+        padding : 10px;
+        border : 1px solid black;
+        margin : 10px;
     }
+`
+
+const HeaderSC = styled.header`
+    padding : 2em;
+    margin : 1em;
 `
 
 export default Header;

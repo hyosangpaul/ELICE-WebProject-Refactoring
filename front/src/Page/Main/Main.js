@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Header from "../../Components/Header/Header";
 import Login from "../User/Login";
+import Cart from "../Cart/Cart";
 
 
 const Main = () => {
@@ -14,6 +15,7 @@ const Main = () => {
             <Routes>
                 <Route path = '/' element = {<Home />} />
                 <Route path = '/Login' element = {<Login />} />
+                <Route path = '/Cart' element = {<Cart />} />
             </Routes>    
         </Router>    
     )
