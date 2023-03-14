@@ -1,23 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// 사용될 components import
-import Home from "./Home";
+// 20230315 사용될 components import
 import Header from "../../Components/Header/Header";
-import Login from "../User/Login";
-import Cart from "../Cart/Cart";
-
+import { ROUTE_ARR } from "../../Components/Route/ROUTE";
 
 const Main = () => {
     return(
+    <div>
         <Router>
             <Header />
             <Routes>
-                <Route path = '/' element = {<Home />} />
-                <Route path = '/Login' element = {<Login />} />
-                <Route path = '/Cart' element = {<Cart />} />
-            </Routes>    
-        </Router>    
+                {ROUTE_ARR.map((route, index) => {
+                return (
+                    <Route path={route.path} element={<route.element />} key={index} />
+                );
+                })}
+            </Routes>
+        </Router>
+    </div>
     )
 };
 
