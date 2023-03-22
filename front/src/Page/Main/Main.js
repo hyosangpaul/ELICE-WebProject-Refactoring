@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // 20230315 사용될 components import
 import Header from "../../Components/Header/Header";
 import { ROUTE_ARR } from "../../Components/Route/ROUTE";
+import { Footer } from "../../Components/Footer/Footer";
 
 const Main = () => {
     return(
@@ -18,6 +19,7 @@ const Main = () => {
                 })}
             </Routes>
         </Router>
+        <Footer />
     </div>
     )
 };
