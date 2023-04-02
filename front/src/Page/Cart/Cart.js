@@ -82,7 +82,7 @@ const DeleteAllBtn = styled.button`
     color : white;
 `
 
-const Cart = ()=>{
+const Cart = () => {
     const navigate = useNavigate();
     const Token = localStorage.getItem("accessToken");
     const [items, setItems] = useState([]);
