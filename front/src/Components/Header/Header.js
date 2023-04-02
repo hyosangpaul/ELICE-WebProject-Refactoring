@@ -12,6 +12,7 @@ const Header = () => {
   return (
     <HeaderSC>
         <NavLink to={ROUTE.HOME.link}>HOME</NavLink>
+        <NavLink to={ROUTE.CART.link}>CART</NavLink>
     </HeaderSC>
   );
 };
