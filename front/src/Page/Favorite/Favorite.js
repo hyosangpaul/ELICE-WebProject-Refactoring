@@ -2,61 +2,9 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
-import { WISHLIST_KEY } from '../../constants/key'
-
-const CartInfo = styled.div`
-    width : 60%;
-    margin : 10px;
-    padding : 10px;
-    box-shadow: 0 5px 10px grey;
-    & h3 {
-        border-bottom: 1px grey solid;
-        padding-bottom: 10px;
-      }
-    & label {
-        display : block;
-        padding-bottom : 20px;
-    }
-
-    & input {
-        width : 80%;
-    }
-
-    & h6 {
-
-        font-weight : bold;
-        weight : 30%;
-
-        
-    }
-`
-
-const CartItem = styled.div`
-    border : 1px solid gray;
-    & div {
-        display : inline;
-        margin : 15px;
-    }
-`
-const ImgDiv = styled.div`
-    border : 1px solid red;
-
-    & img {
-        width : 100px;
-    }
-`
-const DeleteAllBtn = styled.button`
-    padding : 10px;
-    border-radius : 5px;
-    border-color : white;
-    background-color : grey;
-    color : white;
-`
-// const ChanegeHandler = (e)=>{
-//   setCount(e.target.value)
-// }
-
+// 20230403 Styled-component divide to component
+import { CartInfo, CartItem, ImgDiv, DeleteAllBtn } from './FavoriteSC';
+import { WISHLIST_KEY } from '../../Constants/Key'
 
 const Favorite = () => {
   const [items, setItems] = useState([]);
@@ -66,16 +14,13 @@ const Favorite = () => {
   useEffect(() => {
     
     const savedWishList = localStorage.getItem(WISHLIST_KEY)
-
     const wishList = savedWishList ? JSON.parse(savedWishList) : []
-
     setItems(wishList)
 
 
     // count가 각 1개씩 들어가도록 초기세팅
     const newCountObject = wishList.reduce((acc, current) => {
         acc[current.id] = 1
-
         return acc
     }, {})
 
@@ -100,17 +45,16 @@ const Favorite = () => {
   
   const ItemsTrue = () => {
     return (
-      
     <CartInfo>
             {items.map((item)=>{
                 return <CartItem key = {item.id}>
-                    <ImgDiv><img src={item.imgUrl} alt="썸네일" /></ImgDiv>
+                  <ImgDiv><img src={item.imgUrl} alt="썸네일" /></ImgDiv>
                     <div>{item.productName}</div>
-                    <button onClick = {(e) => {
+                      <button onClick = {(e) => {
                         e.preventDefault();
                         navigate(`/Iteminfo/${item.id}`)
                     }}>구매하기</button>
-                 <button onClick = {() => deleteHandler(item.id)}>삭제하기</button>
+                      <button onClick = {() => deleteHandler(item.id)}>삭제하기</button>
                 </CartItem>
             })}
             <DeleteAllBtn
@@ -127,12 +71,16 @@ const Favorite = () => {
 
     const ItemsFalse = () => {
       return  (
-      <Container style={{ display: 'flex', justifyContent: 'center', margin: '200px' }}>
+      <Container style = {{
+        display: 'flex',
+        justifyContent: 'center',
+        margin : '5em'
+      }}>
           <Row style={{
             backgroundColor: 'grey',
             height: '300px',
             width: '60%',
-            margin: '50px'
+            margin: '3em'
           }}>
             <Col style={{ display: 'flex', justifyContent: 'center', margin: '100px 0 0 0px' }}>
               <span class="material-symbols-outlined" style={{ display: 'flex', justifyContent: 'center' }}>diagnosis</span>
