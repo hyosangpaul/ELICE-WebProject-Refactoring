@@ -29,11 +29,13 @@ ROUTE를 기존에 Route태그를 연속으로 사용하여 유지보수 또는 
 - ROUTE의 내부 속성들을 넣은 배열(ROUTE_ARR)을 생성하여 다양한 메소드를 활용 할 수 있도록 export
 - Main.js에서 ROUTE_ARR을 IMPORT하여 속성에 따라 한번에 Route생성
 
-2. 2023.04.02 ~
+2. 2023.04.02
+Styled-Component 분리
 - 컴포넌트 내부에 적어 놓은 Styled-Component를 분리 후 import하여 사용
+- 분리하여 사용함으로서 코드 가독성을 높히고 CSS의 변경을 편리하게 할 수 있게 변경
 
 3. 2023.04.05
-- 기존 mongoDB로 연결한 DB를 MySQL로 변경하여 연동
+기존 mongoDB로 연결한 DB를 MySQL로 변경하여 연동
 
 ## 기술 스택
 
