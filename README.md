@@ -23,17 +23,17 @@
 
 ## 리팩토링한 기능
 
-2023.03.15 완료
-1. ROUTE를 기존에 Route태그를 연속으로 사용하여 유지보수 또는 가독성이 떨어졌던 부분을 ROUTE 컴포넌트를 따로 만들어 가독성 있고 간편하게 관리 기능 추가
+1. 2023.03.15
+ROUTE를 기존에 Route태그를 연속으로 사용하여 유지보수 또는 가독성이 떨어졌던 부분을 ROUTE 컴포넌트를 따로 만들어 가독성 있고 간편하게 관리 기능 추가
 - ROUTE 컴포넌트 내부에 path, link, element 속성을 넣어 객체 리터럴 방식으로 저장하여 사용
 - ROUTE의 내부 속성들을 넣은 배열(ROUTE_ARR)을 생성하여 다양한 메소드를 활용 할 수 있도록 export
 - Main.js에서 ROUTE_ARR을 IMPORT하여 속성에 따라 한번에 Route생성
 
-2023.04.02 ~
-2. 컴포넌트 내부에 적어 놓은 Styled-Component를 분리 후 import하여 사용
+2. 2023.04.02 ~
+- 컴포넌트 내부에 적어 놓은 Styled-Component를 분리 후 import하여 사용
 
-2023.04.05
-3. 기존 mongoDB로 연결한 DB를 MySQL로 변경하여 연동
+3. 2023.04.05
+- 기존 mongoDB로 연결한 DB를 MySQL로 변경하여 연동
 
 ## 기술 스택
 
@@ -50,5 +50,4 @@
   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
   <img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
-  <img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white">
 </div>
