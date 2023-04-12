@@ -3,6 +3,7 @@ import Cart from "../../Page/Cart/Cart";
 import LoginForm from "../../Page/User/Login/LoginForm";
 import RegisterForm from "../../Page/User/Register/RegisterForm";
 import Favorite from "../../Page/Favorite/Favorite";
+import UserMain from "../../Page/User/UserMain/UserMain";
 
 export const ROUTE = {
   HOME: {
@@ -29,6 +30,11 @@ export const ROUTE = {
     path: "/Cart",
     link: "/Cart",
     element: Cart,
+  },
+  USERMAIN: {
+    path: "/UserMain",
+    link: "/UserMain",
+    element: UserMain,
   }
 };
 

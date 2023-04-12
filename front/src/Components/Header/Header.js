@@ -12,10 +12,11 @@ const Header = () => {
   return (
     <HeaderSC>
         <NavLink to={ROUTE.HOME.link}>HOME</NavLink>
-        <NavLink to={ROUTE.LOGIN.link}>Login</NavLink>
-        <NavLink to={ROUTE.REGISTER.link}>Register</NavLink>
+        <NavLink to={ROUTE.LOGIN.link}>LOGIN</NavLink>
+        <NavLink to={ROUTE.REGISTER.link}>REGISTER</NavLink>
         <NavLink to={ROUTE.FAVORITE.link}>FAVORITE</NavLink>
         <NavLink to={ROUTE.CART.link}>CART</NavLink>
+        <NavLink to={ROUTE.USERMAIN.link}>USERMAIN</NavLink>
     </HeaderSC>
   );
 };
