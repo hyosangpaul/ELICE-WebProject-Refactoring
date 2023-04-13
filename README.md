@@ -20,6 +20,7 @@
 - 2023.04.02 : 프로젝트 이후 첫 리팩토링 // Cart , Favorite 추가 및 styled-component 분리 후 import
 - 2023.04.03 : Login , Register 등 추가 및 styled-component 분리 후 import
 - 2023.04.05 : backend MySql 연동
+- 2023.04.12 : UserMain Feat
 
 ## 리팩토링한 기능
 
