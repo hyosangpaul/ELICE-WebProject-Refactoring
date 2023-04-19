@@ -19,7 +19,6 @@
 - 2023.03.15 : Route 따로 컴포넌트화 완료
 - 2023.04.02 : 프로젝트 이후 첫 리팩토링 // Cart , Favorite 추가 및 styled-component 분리 후 import
 - 2023.04.03 : Login , Register 등 추가 및 styled-component 분리 후 import
-- 2023.04.05 : backend MySql 연동
 - 2023.04.12 : UserMain Feat
 
 ## 리팩토링한 기능
@@ -34,9 +33,6 @@ ROUTE를 기존에 Route태그를 연속으로 사용하여 유지보수 또는 
 Styled-Component 분리
 - 컴포넌트 내부에 적어 놓은 Styled-Component를 분리 후 import하여 사용
 - 분리하여 사용함으로서 코드 가독성을 높히고 CSS의 변경을 편리하게 할 수 있게 변경
-
-3. 2023.04.05
-기존 mongoDB로 연결한 DB를 MySQL로 변경하여 연동
 
 ## 기술 스택
 
@@ -53,5 +49,4 @@ Styled-Component 분리
   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
   <img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white">
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white">
 </div>
