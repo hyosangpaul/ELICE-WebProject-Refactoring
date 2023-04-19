@@ -1,24 +1,8 @@
-const express    = require('express');
-const mysql      = require('mysql');
-const dbconfig   = require('./src/config/database');
-const connection = mysql.createConnection(dbconfig);
+import "dotenv/config";
+import app from "./src/app";
+// 테스트용 문구입니다.
+const PORT = process.env.PORT || 8080;
 
-const app = express();
-
-app.set('port', process.env.PORT || 8000);
-
-app.get('/', (req, res) => {
-  res.send('Root');
-});
-
-app.get('/users', (req, res) => {
-  connection.query('SELECT * from Users', (error, rows) => {
-    if (error) throw error;
-    console.log('User info is: ', rows);
-    res.send(rows);
-  });
-});
-
-app.listen(app.get('port'), () => {
-  console.log('Express server listening on port' + app.get('port'));
+app.listen(PORT, () => {
+  console.log("정상적으로 서버를 시작하였습니다.", `PORT : ${PORT}`);
 });
